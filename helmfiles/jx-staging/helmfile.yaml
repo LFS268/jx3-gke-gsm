@@ -18,5 +18,7 @@ releases:
   version: 0.0.1
   name: lfs268-pipeline-lab
   namespace: jx-staging
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
