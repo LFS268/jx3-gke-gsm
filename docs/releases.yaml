@@ -33,17 +33,17 @@
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx-staging/jx-verify
   - apiVersion: v1
-    appVersion: 0.0.1
+    appVersion: 0.0.2
     description: A Helm chart for Kubernetes
-    firstDeployed: "2021-09-01T18:44:06Z"
+    firstDeployed: "2021-09-01T19:45:18Z"
     icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    lastDeployed: "2021-09-01T18:44:06Z"
+    lastDeployed: "2021-09-01T19:45:18Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=sigma-composite-323819&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Flfs268-lab%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Flfs268-pipeline-lab&dateRangeUnbound=both
     name: lfs268-pipeline-lab
     repositoryName: dev
     repositoryUrl: http://chartmuseum-jx.34.69.247.198.nip.io
     resourcePath: config-root/namespaces/jx-staging/lfs268-pipeline-lab
-    version: 0.0.1
+    version: 0.0.2
 - namespace: jx
   path: helmfiles/jx/helmfile.yaml
   releases:
