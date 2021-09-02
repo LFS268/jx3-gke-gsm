@@ -5,28 +5,46 @@ spec:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: lfs268-lab
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "820918094215"
     kanikoFlags: --skip-unused-stages --snapshotMode=redo
+    project: sigma-composite-323819
     provider: gke
     registry: gcr.io
+    zone: us-central1-a
   environments:
   - key: dev
+    owner: LFS268
+    repository: jx3-gke-gsm
   - key: staging
   - key: production
   ingress:
-    domain: ""
-    externalDNS: false
+    domain: 104.197.190.187.nip.io
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
-      production: false
+      production: true
+  kuberhealthy: true
+  pipelineUser:
+    username: AplimaTraining
   repository: nexus
   secretStorage: gsm
+  storage:
+  - name: logs
+    url: gs://logs-lfs268-lab-7d94ca42817b
+  - name: reports
+    url: gs://reports-lfs268-lab-7d94ca42817b
+  - name: repository
+    url: gs://repository-lfs268-lab-7d94ca42817b
   vault: {}
   webhook: lighthouse
