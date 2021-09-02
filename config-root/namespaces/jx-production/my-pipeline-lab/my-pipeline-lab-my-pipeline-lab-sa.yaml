@@ -1,0 +1,10 @@
+# Source: my-pipeline-lab/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: my-pipeline-lab-my-pipeline-lab
+  annotations:
+    meta.helm.sh/release-name: 'my-pipeline-lab'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'

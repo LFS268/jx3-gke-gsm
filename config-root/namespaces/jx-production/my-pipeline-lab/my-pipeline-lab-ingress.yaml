@@ -1,0 +1,22 @@
+# Source: my-pipeline-lab/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'my-pipeline-lab'
+  name: my-pipeline-lab
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: my-pipeline-lab
+                port:
+                  number: 80
+      host: my-pipeline-lab-jx-production.104.197.190.187.nip.io
