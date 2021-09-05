@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         LFS268/jx3-gke-gsm: true
+        LFS268/jx3-terraform: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         LFS268/jx3-gke-gsm: merge
+        LFS268/jx3-terraform: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - LFS268/jx3-gke-gsm
+        - LFS268/jx3-terraform
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - LFS268/jx3-gke-gsm
+        - LFS268/jx3-terraform
       target_url: http://lighthouse-jx.35.193.161.62.nip.io/merge/status
 kind: ConfigMap
 metadata:
